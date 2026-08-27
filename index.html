@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Happy Birthday Akriti</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<audio id="bg-music" loop src="assets/music/rafta-rafta.mp3"></audio>
+<button id="music-toggle" class="music-btn">🔇</button>
+
+<!-- Scene 1: Opening Screen -->
+<section id="scene-opening" class="scene active-scene">
+  <div class="night-sky"><div class="stars"></div><div class="moon"></div></div>
+  <div class="floating-hearts" id="floating-hearts"></div>
+  <div class="opening-content">
+    <p class="pretitle">Happy Birthday</p>
+    <h1 class="name-glow">Akriti <span class="heart-icon">❤️</span></h1>
+    <p class="subtitle">A special surprise made with love, just for you.</p>
+    <button id="open-surprise" class="glow-button"><span class="gift-icon">🎁</span> Open Your Surprise</button>
+  </div>
+</section>
+
+<!-- Scene 2: Gift Opening -->
+<section id="scene-gift" class="scene">
+  <div class="night-sky"><div class="stars"></div></div>
+  <div class="gift-content">
+    <p class="gift-hint" id="gift-hint">Tap the gift to open it</p>
+    <div class="gift-box" id="gift-box">
+      <div class="gift-lid"></div>
+      <div class="gift-base"></div>
+      <div class="gift-ribbon-v"></div>
+      <div class="gift-ribbon-h"></div>
+      <div class="gift-bow">🎀</div>
+    </div>
+    <div class="light-burst" id="light-burst"></div>
+    <button id="continue-btn" class="glow-button hidden">Continue</button>
+  </div>
+</section>
+
+<!-- Scene 3: Romantic Letter -->
+<section id="scene-letter" class="scene">
+  <div class="night-sky"><div class="stars"></div></div>
+  <div class="letter-content">
+    <div class="letter-ornament">❦</div>
+    <div class="letter-card">
+      <div class="letter-corner tl"></div>
+      <div class="letter-corner tr"></div>
+      <div class="letter-corner bl"></div>
+      <div class="letter-corner br"></div>
+      <p id="letter-text" class="letter-text"></p>
+    </div>
+    <button id="letter-continue-btn" class="glow-button hidden">Continue</button>
+  </div>
+</section>
+
+<!-- Scene 4: Memory Gallery -->
+<section id="scene-gallery" class="scene scene-scroll">
+  <div class="night-sky"><div class="stars"></div></div>
+  <div class="gallery-content">
+    <h2 class="gallery-title">Our Memories</h2>
+    <p class="gallery-subtitle">Every picture tells a piece of our story</p>
+<div class="memory-grid">
+  <div class="memory-card"><img src="assets/photos/1.jpg" alt="Memory 1" class="memory-img"><div class="memory-caption"><p class="memory-title-text">Caption goes here</p><p class="memory-date">Date</p></div></div>
+  <div class="memory-card"><img src="assets/photos/2.jpg" alt="Memory 2" class="memory-img"><div class="memory-caption"><p class="memory-title-text">Caption goes here</p><p class="memory-date">Date</p></div></div>
+  <div class="memory-card"><img src="assets/photos/3.jpg" alt="Memory 3" class="memory-img"><div class="memory-caption"><p class="memory-title-text">Caption goes here</p><p class="memory-date">Date</p></div></div>
+  <div class="memory-card"><img src="assets/photos/4.jpg" alt="Memory 4" class="memory-img"><div class="memory-caption"><p class="memory-title-text">Caption goes here</p><p class="memory-date">Date</p></div></div>
+  <div class="memory-card"><img src="assets/photos/5.jpg" alt="Memory 5" class="memory-img"><div class="memory-caption"><p class="memory-title-text">Caption goes here</p><p class="memory-date">Date</p></div></div>
+  <div class="memory-card"><img src="assets/photos/6.jpg" alt="Memory 6" class="memory-img"><div class="memory-caption"><p class="memory-title-text">Caption goes here</p><p class="memory-date">Date</p></div></div>
+  <div class="memory-card"><img src="assets/photos/7.jpg" alt="Memory 7" class="memory-img"><div class="memory-caption"><p class="memory-title-text">Caption goes here</p><p class="memory-date">Date</p></div></div>
+  <div class="memory-card"><img src="assets/photos/8.jpg" alt="Memory 8" class="memory-img"><div class="memory-caption"><p class="memory-title-text">Caption goes here</p><p class="memory-date">Date</p></div></div>
+  <div class="memory-card"><img src="assets/photos/9.jpg" alt="Memory 9" class="memory-img"><div class="memory-caption"><p class="memory-title-text">Caption goes here</p><p class="memory-date">Date</p></div></div>
+  <div class="memory-card"><img src="assets/photos/10.jpg" alt="Memory 10" class="memory-img"><div class="memory-caption"><p class="memory-title-text">Caption goes here</p><p class="memory-date">Date</p></div></div>
+</div>
+    <button id="gallery-continue-btn" class="glow-button">Continue</button>
+  </div>
+</section>
+
+<!-- Scene 5: Distance Between Us -->
+<section id="scene-distance" class="scene">
+  <div class="night-sky"><div class="stars"></div></div>
+  <div class="distance-content">
+    <h2 class="gallery-title">Distance Between Us</h2>
+    <p class="gallery-subtitle">Miles apart, but never far from the heart</p>
+    <div class="distance-map">
+      <div class="city-point">
+        <div class="city-dot"></div>
+        <p class="city-name">Hatta</p>
+        <p class="city-sub">Damoh, Madhya Pradesh</p>
+      </div>
+      <div class="distance-line"><span class="pulse-heart">❤️</span></div>
+      <div class="city-point">
+        <div class="city-dot"></div>
+        <p class="city-name">Gorakhpur</p>
+        <p class="city-sub">Uttar Pradesh</p>
+      </div>
+    </div>
+    <p class="distance-message">Kitne bhi kilometers ho beech mein, dil hamesha tumhare paas rehta hai.</p>
+    <button id="distance-continue-btn" class="glow-button">Continue</button>
+  </div>
+</section>
+
+<!-- Scene: The Road To You -->
+<section id="scene-roadmap" class="scene">
+  <div class="night-sky"><div class="stars"></div></div>
+  <div class="roadmap-content">
+    <h2 class="gallery-title">The Road To You</h2>
+    <p class="gallery-subtitle">No distance is too far when love leads the way</p>
+
+    <div class="road-wrap">
+      <svg class="road-svg" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+        <path id="road-path" d="M40,370 C 40,300 260,300 150,230 C 40,160 260,160 150,90 C 90,50 60,40 40,30"
+          fill="none" stroke="#e8c988" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+      </svg>
+      <div class="road-heart" id="road-heart">❤️</div>
+
+      <div class="road-marker marker-start">
+        <div class="road-dot"></div>
+        <p class="road-city-name">Hatta</p>
+        <p class="road-city-sub">Damoh, MP</p>
+      </div>
+      <div class="road-marker marker-end">
+        <div class="road-dot"></div>
+        <p class="road-city-name">Gorakhpur</p>
+        <p class="road-city-sub">Uttar Pradesh</p>
+      </div>
+    </div>
+
+    <button id="roadmap-continue-btn" class="glow-button">Continue</button>
+  </div>
+</section>
+
+<!-- Scene 6: Birthday Cake -->
+<section id="scene-cake" class="scene">
+  <div class="night-sky"><div class="stars"></div></div>
+  <div class="cake-content">
+    <p class="gift-hint" id="cake-hint">Tap each candle to blow it out</p>
+    <div class="cake" id="cake">
+      <div class="candle-row">
+        <div class="candle" data-candle="1"><div class="flame"></div></div>
+        <div class="candle" data-candle="2"><div class="flame"></div></div>
+        <div class="candle" data-candle="3"><div class="flame"></div></div>
+      </div>
+      <div class="cake-tier cake-tier-top">
+        <span class="sprinkle s1"></span><span class="sprinkle s2"></span>
+        <span class="sprinkle s3"></span><span class="sprinkle s4"></span>
+        <span class="sprinkle s5"></span><span class="sprinkle s6"></span>
+        <div class="drip d1"></div><div class="drip d2"></div><div class="drip d3"></div>
+      </div>
+      <div class="cake-tier cake-tier-bottom">
+        <div class="drip db1"></div><div class="drip db2"></div><div class="drip db3"></div><div class="drip db4"></div>
+      </div>
+      <div class="cake-plate"></div>
+    </div>
+    <button id="cake-continue-btn" class="glow-button hidden">Continue</button>
+  </div>
+</section>
+
+<!-- Scene 7: Celebration -->
+<section id="scene-celebration" class="scene">
+  <div class="night-sky"><div class="stars"></div></div>
+  <div class="confetti-container" id="confetti-container"></div>
+  <div class="celebration-content">
+    <h2 class="celebration-title">🎉 Happy Birthday! 🎉</h2>
+    <p class="celebration-sub">Here's to another year as beautiful as you.</p>
+    <button id="celebration-continue-btn" class="glow-button">Continue</button>
+  </div>
+</section>
+
+<!-- Scene 8: Final Surprise -->
+<section id="scene-final" class="scene">
+  <div class="night-sky"><div class="stars"></div><div class="moon"></div></div>
+  <div class="floating-hearts" id="floating-hearts-final"></div>
+  <div class="final-content">
+    <h1 class="final-title">I Love You<br>Akriti <span class="heart-icon">❤️</span></h1>
+    <p class="final-sign">Forever Yours,<br>Amit</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
